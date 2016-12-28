@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>LetItFloe</title>
+			
+			<script type="text/css">
+				#hdr{
+				background-color:#3090C7;
+				} 	
+			</script> 
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+			<script type="text/javascript">
+				jQuery(document).ready(function($){
+			/* prepend menu icon */
+			$('#nav-wrap').prepend('<div id="menu-icon">Options</div>');
+			</script>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+				<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+				<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+				<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+				<script>	
+							
+
+<!-- Creates the check boxesand links them to the different maps under the Restroom drop down menu		-->					
+					function start(){
+							$("#page").delay(2500).fadeOut();
+						}
+		<!-- Public Places-->
+						function validateCheck(){
+							var myBox = document.getElementById('checkbox-0');
+								if (myBox.checked) {
+									window.location.replace('file:///C:/Users/GWC/Desktop/LIFE/LIFEpublicplaces.html');
+								}
+						}
+			<!-- Stores-->			
+						function validateCheck1(){
+							var myBox1 = document.getElementById('checkbox-1');
+								if (myBox1.checked) {
+									window.location.replace('exRestaurantmap.html');
+								}
+						}
+				<!-- Attractions-->		
+						function validateCheck2(){
+							var myBox1 = document.getElementById('checkbox-2');
+								if (myBox1.checked) {
+									window.location.replace('file:///C:/Users/GWC/Desktop/LIFE/exattractions.html');
+								}
+						}
+						
+				</script>
+				
+				<style type="text/css">
+					#page{
+						background: url('file:///C:/Users/GWC/Desktop/LIFE/city.jpg') repeat scroll 50% 50% #112233 
+						height: 100%;
+						width: 100%;
+						position:absolute;
+						z-index: 1001;
+						background-color: #FFFFFF;
+					}
+					
+					#page1{ 
+						height:150px;
+						font-size:25px;
+						color: blue;
+						font-family: "Code-Bold";
+
+					}
+					
+					#center{
+						color:white;
+						font-size:30px;
+						font-family: "Champagne & Limousines";
+					}
+					
+					#restroom{
+						background-color:#000000;
+						color:white;
+					}
+					
+					#statement{
+						background-color:black;
+						border-radius:25px;
+						text-align:center;
+					}
+					
+					#why{
+						font-family: "Code-Bold";
+					}
+					
+					#logo{
+						border-radius:25px;
+					}
+					
+					#footer{
+						font-size: 30pt;
+					}
+					
+					.ui-page {
+						background: url('file:///C:/Users/GWC/Desktop/LIFE/city.jpg') repeat scroll 50% 50% #112233 !important;
+						color: #aabbcc !important;
+						font-size: 20pt;
+						font-family: "Code-Bold";
+					} 
+					
+					ui-#page1 {
+						background: url('file:///C:/Users/GWC/Desktop/LIFE/city.jpg') repeat scroll 50% 50% #112233 !important;
+						color: #aabbcc !important;
+						font-size: 10pt;
+						font-family: "Code-Bold";
+					} 
+					
+				</style>
+		</head>
+
+		<body onload="start()">
+
+		<!-- Start of home page -->
+		<div data-role="page">
+
+			<div data-role="content" id="page">
+		<!-- fade in drop at once the app is opened -->
+				<img src="earthdrop.jpg" width = "400" height = "500px" style = "margin-left: auto; margin-right: auto; display: block;" />
+			</div>
+			
+				<!-- homepage with content meaning mission statement and logo... possibly change the font, it also -->
+			<div id="center">
+				<div data-role = "content">
+						<div id="logo">
+						<center>
+							<img src = "file:///C:/Users/GWC/Desktop/LIFE/roundedlogo.png" width = "75%" height = "25%" style = "margin-left: auto; margin-right: auto;" />
+						</center>
+						</div>
+							<div id="statement">
+								<center>
+								<p>LetItFloE is an unique 2 in 1 mobile application that allows you to easily locate a drinking fountain or bathroom in Manhattan so you can always LetItFloE. <!--We highlighted the word LIFE within our logo because our app will keep you hydrated and satisfied, which are life's basic needs.--></p>
+								</center>
+							</div>
+					<!---This is the mission statement--->
+				</div>
+			</div>
+			
+			<!-- Footer includes a start button that links to the menu page -->
+			<div data-role = "footer" id = "footer">
+					<center>
+						<a href="#page1" data-role="button" data-theme = "c">Start</a>
+					</center>
+			</div>
+				
+					
+			</div>
+
+		</div><!-- /home -->
+
+		
+		<!-- Start of first page1 menu page which includes our banner, drop down restroom menu with three location options, and two buttons for just water fountains, and  both -->
+		<!-- redo logo solid color different fonts -->
+		<div data-role="page" id="page1">
+		
+			<div data-role="header">
+					<img src="file:///C:/Users/GWC/Desktop/LIFE/newbanner.jpg" width = "100%" height = "40%"> 
+			</div><!-- /header -->	
+					
+					<div data-role="content">
+					
+									<div data-role="collapsible" data-theme="b" >
+								
+											<h3>Choose a Restroom:</h3>
+										
+												<div data-inline="true"  data-theme="c">
+														<div data-role="fieldcontain"><center>
+															<fieldset data-role="controlgroup">
+																<label><input type="checkbox" name="checkbox-0" id = "checkbox-0" onclick="validateCheck()"/> Public Places </label>
+																<label><input type="checkbox" name="checkbox-1" id = "checkbox-1"onclick="validateCheck1()"/> Stores </label>
+																<label><input type="checkbox" name="checkbox-2" id = "checkbox-2"onclick="validateCheck2()"/> Attractions </label>
+															</fieldset></center>
+														</div>	
+												</div>
+									</div>
+								
+									<center> <a href="C:/Users/GWC/Desktop/LIFE/LIFEbathrooms.html" data-role="button" data-theme = "b">All Water Fountains</a> </center>
+									<center> <a href="C:/Users/GWC/Desktop/LIFE/LIFEallrestrooms.html" data-role="button" data-theme = "b">All Restrooms</a> </center>
+									<center> <a href="C:/Users/GWC/Desktop/LIFE/LIFEmap.html" data-role="button" data-theme = "b">All Restrooms & Water Fountains</a></center>
+
+					</div><!-- /content -->		
+		</div><!-- /end page1 -->
+	
+		</body>
+</html>

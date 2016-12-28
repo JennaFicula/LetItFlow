@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<script src="../../js/ios-orientationchange-fix.min.js"></script>	
+		<style type="text/css">
+			html{ height: 100% }
+			body { height: 100%; margin = 0; padding = 0 }
+			#map-canvas { height: 100% }
+			
+			#header{
+				position: absolute;
+				top: 5%;
+				left: 50%;
+			}
+			
+			#button{
+				position: absolute;
+				top: 7.8%;
+				left: 67%;
+			}
+			
+		</style>
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO1J1WIB-SabURVdPeww29EV28F40_o20&sensor=true">
+			
+		</script>
+		<script type="text/javascript">
+			
+			<!--this is for stores, so rename doc!! also need attractions, forgot to add bergdorf goodman -->
+			var myCenter30 = new google.maps.LatLng(40.762504,-73.977992);
+			var myCenter9 = new google.maps.LatLng(40.751809,-73.985737);
+			var myCenter10 = new google.maps.LatLng(40.689669,-74.044529);
+			var myCenter11 = new google.maps.LatLng(40.780021,-73.962886);
+			var myCenter12 = new google.maps.LatLng(40.781549,-73.973225);
+			var myCenter13 = new google.maps.LatLng(40.78756,-73.959301);
+			var myCenter14 = new google.maps.LatLng(40.759107,-73.978718);
+			var myCenter15 = new google.maps.LatLng(40.759123,-73.978954);
+			var myCenter16 = new google.maps.LatLng(40.751093,-73.96844);
+			var myCenter17 = new google.maps.LatLng(40.743095,-74.00977);
+			var myCenter18 = new google.maps.LatLng(40.739584,-74.001099);
+			var myCenter19 = new google.maps.LatLng(40.740868,-74.000133);
+			var myCenter20 = new google.maps.LatLng(40.742738,-74.000734);
+			var myCenter21 = new google.maps.LatLng(40.743713,-73.998463);
+			var myCenter22 = new google.maps.LatLng(40.745209,-73.995802);
+			var myCenter23 = new google.maps.LatLng(40.74833,-73.998824);
+			var myCenter24 = new google.maps.LatLng(40.748801,-73.996228);
+			var myCenter25 = new google.maps.LatLng(40.750849,-73.996829);
+
+			
+			function initialize() {
+			var mapOptions = {
+			  center:myCenter18,
+			  zoom: 12,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			}; 
+			
+			var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+			
+			var marker30 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter30,
+			});
+			marker30.setMap(map);
+			var infowindow30 = new google.maps.InfoWindow({content:"Museum of Modern Art (MOMA)<br>11 W 53rd St, New York, NY"});
+			
+			var marker9 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter9,
+			});
+			marker9.setMap(map);
+			var infowindow9 = new google.maps.InfoWindow({content:"Empire State Building<br>350 5th Ave, New York, NY"});
+			
+			var marker10 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter10,
+			});
+			marker10.setMap(map);
+			var infowindow10 = new google.maps.InfoWindow({content:"Statue of Liberty<br>Liberty Island, New York, NY"});
+			
+			var marker11 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter11,
+			});
+			marker11.setMap(map);
+			var infowindow11 = new google.maps.InfoWindow({content:"Metropolitan Museum of Art (MET)<br>1000 5th Ave, New York, NY‎"});
+			
+			var marker12 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter12,
+			});
+			marker12.setMap(map);
+			var infowindow12 = new google.maps.InfoWindow({content:"American Museum of Natural History<br>Central Park West, New York, NY 10024"});
+			
+			var marker13 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter13,
+			});
+			marker13.setMap(map);
+			var infowindow13 = new google.maps.InfoWindow({content:"Guggenheim Museum<br>1071 5th Ave, New York, NY"});
+			
+			var marker14 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter14,
+			});
+			marker14.setMap(map);
+			var infowindow14 = new google.maps.InfoWindow({content:"Rockefeller Center<br>45 Rockefeller Plaza, New York, NY"});
+			
+			var marker15 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter15,
+			});
+			marker15.setMap(map);
+			var infowindow15 = new google.maps.InfoWindow({content:"Top of the Rock<br>30 Rockefeller Plaza, New York, NY"});
+			
+			var marker16 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter16,
+			});
+			marker16.setMap(map);
+			var infowindow16 = new google.maps.InfoWindow({content:"United Nations<br>East 45th St"});
+			
+			var marker17 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter17,
+			});
+			marker17.setMap(map);
+			var infowindow17 = new google.maps.InfoWindow({content:"The High Line<br>Gansevoort St"});
+			
+			var marker18 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter18,
+			});
+			marker18.setMap(map);
+			var infowindow18 = new google.maps.InfoWindow({content:"The High Line<br>West 14th St"});
+			
+			var marker19 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter19,
+			});
+			marker19.setMap(map);
+			var infowindow19 = new google.maps.InfoWindow({content:"The High Line<br>West 16th St"});
+			
+			var marker20 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter20,
+			});
+			marker20.setMap(map);
+			var infowindow20 = new google.maps.InfoWindow({content:"The High Line<br>West 18th St"});
+			
+			var marker21 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter21,
+			});
+			marker21.setMap(map);
+			var infowindow21 = new google.maps.InfoWindow({content:"The High Line<br>West 20th St"});
+			
+			var marker22 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter22,
+			});
+			marker22.setMap(map);
+			var infowindow22 = new google.maps.InfoWindow({content:"The High Line<br>West 23rd St"});
+			
+			var marker23 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter23,
+			});
+			marker23.setMap(map);
+			var infowindow23 = new google.maps.InfoWindow({content:"The High Line<br>West 26th St"});
+			
+			var marker24 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter24,
+			});
+			marker24.setMap(map);
+			var infowindow24 = new google.maps.InfoWindow({content:"The High Line<br>West 28th St"});
+			
+			var marker25 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter25,
+			});
+			marker25.setMap(map);
+			var infowindow25 = new google.maps.InfoWindow({content:"The High Line<br>West 30th St"});
+
+		//infowindows 
+	
+					google.maps.event.addListener(marker30, 'click', function() {
+						infowindow30.open(map,marker30);
+					});
+
+					google.maps.event.addListener(marker9, 'click', function() {
+						infowindow9.open(map,marker9)
+					});
+					
+					google.maps.event.addListener(marker10, 'click', function() {
+						infowindow10.open(map,marker10);
+					});
+					
+					google.maps.event.addListener(marker11, 'click', function() {
+						infowindow11.open(map,marker11);
+					});
+					
+					google.maps.event.addListener(marker12, 'click', function() {
+						infowindow12.open(map,marker12);
+					});
+					
+					google.maps.event.addListener(marker13, 'click', function() {
+						infowindow13.open(map,marker13);
+					});
+					
+					google.maps.event.addListener(marker14, 'click', function() {
+						infowindow14.open(map,marker14);
+					});
+					
+					google.maps.event.addListener(marker15, 'click', function() {
+						infowindow15.open(map,marker15);
+					});
+					
+					google.maps.event.addListener(marker16, 'click', function() {
+						infowindow16.open(map,marker16);
+					});
+					
+					google.maps.event.addListener(marker17, 'click', function() {
+						infowindow17.open(map,marker17);
+					});
+					
+					google.maps.event.addListener(marker18, 'click', function() {
+						infowindow18.open(map,marker18);
+					});
+					
+					google.maps.event.addListener(marker19, 'click', function() {
+						infowindow19.open(map,marker19);
+					});
+					
+					google.maps.event.addListener(marker20, 'click', function() {
+						infowindow20.open(map,marker20);
+					});
+					
+					google.maps.event.addListener(marker21, 'click', function() {
+						infowindow21.open(map,marker21);
+					});
+					
+					google.maps.event.addListener(marker22, 'click', function() {
+						infowindow22.open(map,marker22);
+					});
+					
+					google.maps.event.addListener(marker23, 'click', function() {
+						infowindow23.open(map,marker23);
+					});
+					
+					google.maps.event.addListener(marker24, 'click', function() {
+						infowindow24.open(map,marker24);
+					});
+					
+					google.maps.event.addListener(marker25, 'click', function() {
+						infowindow25.open(map,marker25);
+					});
+					
+					google.maps.event.addListener(marker26, 'click', function() {
+						infowindow26.open(map,marker26);
+					});
+					
+					google.maps.event.addListener(marker27, 'click', function() {
+						infowindow27.open(map,marker27);
+					});
+					
+					google.maps.event.addListener(marker28, 'click', function() {
+						infowindow28.open(map,marker28);
+					});
+		  }
+
+		  google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	<body bgcolor="#000000">
+	
+	<div data-role="header">
+				<div style="text-align:center; width:800px; margin-left:auto; margin-right:auto;">
+					<img id="imgid" src="bannernycattractions.jpg" usemap="#imgmap" border="0" width="800" height="166" alt="" />
+					
+					<map id="imgmap" name="imgmap">
+						<area shape="poly" coords="590,55,590,112,744,114,762,97,784,94,787,69,766,72,747,54," href="file:///C:/Users/GWC/Desktop/LIFE/index.html#page1" alt="" title=""   />
+					</map>
+				</div>
+			</div><!-- /header -->		
+		
+		<div id="map-canvas"/>
+		
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+				<script src="jquery.rwdImageMaps.min.js"></script>
+				<script>
+				$(document).ready(function(e) {
+					$('img[usemap]').rwdImageMaps();
+					
+					$('area').on('click', function() {
+						alert($(this).attr('alt') + ' clicked');
+					});
+				});
+	</body>
+</html>

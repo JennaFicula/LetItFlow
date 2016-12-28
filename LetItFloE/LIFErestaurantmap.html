@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<style type="text/css">
+			html{ height: 100% }
+			body { height: 100%; margin = 0; padding = 0 }
+			#map-canvas { height: 100% }
+		</style>
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO1J1WIB-SabURVdPeww29EV28F40_o20&sensor=true">
+		</script>
+		<script type="text/javascript">
+			
+			
+			var myCenter8 = new google.maps.LatLng(40.703399,-74.012257);
+			var myCenter9 = new google.maps.LatLng(40.709093,-74.005626);
+			
+			
+			
+			function initialize() {
+			var mapOptions = {
+			  center:myCenter8,
+			  zoom: 12,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			}; 
+			
+			var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+
+			
+			
+			var marker8 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter8,
+			});
+			marker8.setMap(map);
+			var infowindow8 = new google.maps.InfoWindow({content:"McDonalds <br> 6 Water St."});
+			
+			var marker9 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter9,
+			});
+			marker9.setMap(map);
+			var infowindow9 = new google.maps.InfoWindow({content:"Burger King <br> 44 Gold St, New York, NY 10038"});
+			
+			
+			
+			
+			
+			
+			
+			infowindow8.open(map,marker8)
+			
+			infowindow9.open(map,marker9)
+			
+			
+		  }
+
+		  google.maps.event.addDomListener(window, 'load', initialize);
+		  
+		/*$('#map_canvas').gmap().bind('init', function() { 
+			$('#map_canvas').gmap('addMarker', { 'tags':'bathrrom', 'position': '40.798542,-73.952325', 'bounds':true });
+			$('#map_canvas').gmap('find', 'markers', { 'property': 'tags', 'value': 'bathroom' }, function(marker, isFound) {
+					if ( isFound ) {
+							marker.setVisible(true);
+					} else {
+							marker.setVisible(false);
+					}
+			});
+		});*/
+		
+		
+		//function b() {
+			//alert("test1");
+			//$('#map_canvas').gmap('closeInfoWindow');
+			
+			//$('#map_canvas').gmap('set', 'bounds', null);
+			/*var filters = [];
+			$('input:checkbox:checked').each(function(i, checkbox) {
+				filters.push($(checkbox).val());
+			});*/
+			//if ( filters.length > 0 ) {
+				
+				/*$('#map_canvas').gmap('find', 'markers', { 'property': 'tags', 'value': 'bathroom'}, function(marker, found) {
+					if (found) {
+						$('#map_canvas').gmap('addBounds', marker.position);
+					}
+					marker.setVisible(false); 
+				});
+				alert('test');
+			/*} else {
+				$.each($('#map_canvas').gmap('get', 'markers'), function(i, marker) {
+					$('#map_canvas').gmap('addBounds', marker.position);
+					marker.setVisible(false); 
+				});
+			//}*/
+			/*$('#map_canvas').gmap('find', 'markers', { }, function(marker) {
+				alert ('hello');
+				if(marker.title == 'BR'){marker.setVisible(false);}
+			});
+		}*/
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+		<a href = "" value="Button" id = "myButton" onclick = "b()">Button</a>
+		<div id="map-canvas"/>
+	</body>
+</html>

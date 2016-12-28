@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<script src="../../js/ios-orientationchange-fix.min.js"></script>
+		<style type="text/css">
+			html{ height: 100% }
+			body { height: 100%; margin = 0; padding = 0 }
+			#map-canvas { height: 100% }
+						
+			#header{
+				position: absolute;
+				top: 5%;
+				left: 50%;
+				background-color: #000000;
+			}
+			
+			#button{
+				position: absolute;
+				top: 7.8%;
+				left: 67%;
+				background-color: #000000;
+			}
+			
+		</style>
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO1J1WIB-SabURVdPeww29EV28F40_o20&sensor=true">
+		</script>
+		<script type="text/javascript">
+		
+	//original 
+	
+			var myCenter = new google.maps.LatLng(40.798542,-73.952325);
+			var myCenter1 = new google.maps.LatLng(40.798152,-73.95491);
+			var myCenter2 = new google.maps.LatLng(40.797665,-73.959753);
+			var myCenter3 = new google.maps.LatLng(40.797665,-73.959753);
+			var myCenter4 = new google.maps.LatLng(40.70487,-74.015682);
+			var myCenter5 = new google.maps.LatLng(40.709093,-74.005626);
+			var myCenter6 = new google.maps.LatLng(40.72186,-73.99614);
+			var myCenter7 = new google.maps.LatLng(40.721866,-73.986049);
+			var myCenter8 = new google.maps.LatLng(40.759611,-73.958572);
+			var myCenter9 = new google.maps.LatLng(40.774172,-73.974236);
+
+
+	//public places 
+	
+			var myCenter10 = new google.maps.LatLng(40.798265,-73.953817);			
+			var myCenter11 = new google.maps.LatLng(40.793485,-73.95502);			
+			var myCenter12 = new google.maps.LatLng(40.79749,-73.960578);			
+			var myCenter13 = new google.maps.LatLng(40.769203,-73.979858);			
+			var myCenter14 = new google.maps.LatLng(40.713539,-74.007812);			
+			var myCenter15 = new google.maps.LatLng(40.70487,-74.015682);			
+			var myCenter16 = new google.maps.LatLng(40.703692,-74.016868);			
+			var myCenter17 = new google.maps.LatLng(40.701258,-74.013179);			
+					
+			var myCenter19 = new google.maps.LatLng(40.712364,-73.988433);			
+			var myCenter20 = new google.maps.LatLng(40.715341,-74.017154);			
+			var myCenter21 = new google.maps.LatLng(40.753781,-73.983843);			
+			var myCenter22 = new google.maps.LatLng(40.730908,-73.997759);			
+			var myCenter23 = new google.maps.LatLng(40.7359,-73.990034);
+			var myCenter24 = new google.maps.LatLng(40.798542,-73.952325);
+			var myCenter25 = new google.maps.LatLng(40.798152,-73.95491);
+			var myCenter26 = new google.maps.LatLng(40.797665,-73.959753);
+			var myCenter27 = new google.maps.LatLng(40.797665,-73.959753);
+			var myCenter28 = new google.maps.LatLng(40.703692,-74.016868);
+		
+			
+	// stores 
+			var myCenter29 = new google.maps.LatLng(40.703399,-74.012257);
+			var myCenter30 = new google.maps.LatLng(40.709093,-74.005626);
+			var myCenter31 = new google.maps.LatLng(40.76733,-73.959836);
+			var myCenter32 = new google.maps.LatLng(40.764486,-73.974706);
+			var myCenter33 = new google.maps.LatLng(40.763836,-73.975028);
+			var myCenter34 = new google.maps.LatLng(40.762617,-73.975221);
+			var myCenter35 = new google.maps.LatLng(40.754816,-73.978568);
+			var myCenter36 = new google.maps.LatLng(40.746152,-73.988653);
+			var myCenter37 = new google.maps.LatLng(40.742169,-74.007579);
+			var myCenter38 = new google.maps.LatLng(40.742152,-73.999597);
+			var myCenter39 = new google.maps.LatLng(40.739502,-74.005648);
+			var myCenter40 = new google.maps.LatLng(40.740575,-73.995842);
+			var myCenter41 = new google.maps.LatLng(40.740787,-73.989512);
+			var myCenter42 = new google.maps.LatLng(40.725112,-74.000734);
+			var myCenter43 = new google.maps.LatLng(40.724234,-73.993803);
+			var myCenter44 = new google.maps.LatLng(40.723145,-73.997086);
+			var myCenter45 = new google.maps.LatLng(40.722673,-73.999339);
+			var myCenter46 = new google.maps.LatLng(40.722966,-73.997687);
+			var myCenter47 = new google.maps.LatLng(40.721307,-73.999339);
+			var myCenter48 = new google.maps.LatLng(40.764048,-73.973783);
+			
+		//attractions
+			var myCenter49 = new google.maps.LatLng(40.762504,-73.977992);
+			var myCenter50= new google.maps.LatLng(40.751809,-73.985737);
+			var myCenter51= new google.maps.LatLng(40.689669,-74.044529);
+			var myCenter52 = new google.maps.LatLng(40.780021,-73.962886);
+			var myCenter53 = new google.maps.LatLng(40.781549,-73.973225);
+			var myCenter54 = new google.maps.LatLng(40.78756,-73.959301);
+			var myCenter55 = new google.maps.LatLng(40.759107,-73.978718);
+			var myCenter56 = new google.maps.LatLng(40.759123,-73.978954);
+			var myCenter57 = new google.maps.LatLng(40.751093,-73.96844);
+			var myCenter58 = new google.maps.LatLng(40.743095,-74.00977);
+			var myCenter59 = new google.maps.LatLng(40.739584,-74.001099);
+			var myCenter60 = new google.maps.LatLng(40.740868,-74.000133);
+			var myCenter61 = new google.maps.LatLng(40.742738,-74.000734);
+			var myCenter62 = new google.maps.LatLng(40.743713,-73.998463);
+			var myCenter63 = new google.maps.LatLng(40.745209,-73.995802);
+			var myCenter64 = new google.maps.LatLng(40.74833,-73.998824);
+			var myCenter65 = new google.maps.LatLng(40.748801,-73.996228);
+			var myCenter66 = new google.maps.LatLng(40.750849,-73.996829);
+			
+			//additional public places
+						
+					var myCenter89 = new google.maps.LatLng(40.771214,-73.951446); //webster library
+					var myCenter90 = new google.maps.LatLng(40.7886,-73.977326);			
+					var myCenter91 = new google.maps.LatLng(40.753337,-73.981658);			
+					var myCenter92 = new google.maps.LatLng(40.75532,-73.98439);			
+					var myCenter93 = new google.maps.LatLng(40.768842,-73.951088);			
+					var myCenter94 = new google.maps.LatLng(40.782621,-73.984734);			
+					var myCenter95 = new google.maps.LatLng(40.780281,-73.98645);			
+					var myCenter96 = new google.maps.LatLng(40.713907,-74.007836);			
+					var myCenter97 = new google.maps.LatLng(40.73295,-73.98814);			
+					var myCenter98 = new google.maps.LatLng(40.751679,-73.99572);			
+					var myCenter99 = new google.maps.LatLng(40.753824,-73.98169);			
+					var myCenter100 = new google.maps.LatLng(40.775407,-73.956369);			
+					var myCenter101 = new google.maps.LatLng(40.716558,-74.015801);			
+			
+			
+	//function
+			function initialize() {
+				var mapOptions = {
+				  center:myCenter47,
+				  zoom: 12,
+				  mapTypeId: google.maps.MapTypeId.ROADMAP
+				}; 
+			
+				var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+				
+	////original
+				
+				var marker = new google.maps.Marker({
+				tags:'bathroom',
+				position:myCenter,
+				});
+				marker.setMap(map);
+				var infowindow = new google.maps.InfoWindow({content:"Lenox Ave & W 110th St <br> New York, NY 10026"});
+				
+				var marker1 = new google.maps.Marker({
+				tags:'bathroom',
+				position:myCenter1,
+				});
+				marker1.setMap(map);
+				var infowindow1 = new google.maps.InfoWindow({content:"106th, Mid-Park"});
+				
+				var marker2 = new google.maps.Marker({
+				tags:'bathroom',
+				position:myCenter2,
+				});
+				marker2.setMap(map);
+				var infowindow2 = new google.maps.InfoWindow({content:"Great Hill <br> W. 106th St."});
+				
+				var marker3 = new google.maps.Marker({
+				tags:'bathroom',
+				position:myCenter3,
+				});
+				marker3.setMap(map);
+				var infowindow3 = new google.maps.InfoWindow({content:"North Meadow Recreation Center <br> 97th Street Transverse Road, Central Park"});
+				
+				var marker4 = new google.maps.Marker({
+				tags:'bathroom',
+				position:myCenter4,
+				});
+				marker4.setMap(map);
+				var infowindow4 = new google.maps.InfoWindow({content:"Battery Park <br> Washington St & Battery Pl, New York, NY 10004"});
+				
+				var marker5 = new google.maps.Marker({ 
+				tags:'bathroom',
+				position:myCenter5, 
+				});
+				marker5.setMap(map);
+				var infowindow5 = new google.maps.InfoWindow({content:"Thompson Street Pool <br> Thompson Street New York, NY 1001"});
+				
+				var marker6 = new google.maps.Marker({ 
+				tags:'bathroom',
+				position:myCenter6, 
+				});
+				marker6.setMap(map);
+				var infowindow6 = new google.maps.InfoWindow({content:"DeSalvio Playground <br> Mulberry Street New York, NY 10012"});
+				
+				var marker7 = new google.maps.Marker({ 
+				tags:'bathroom',
+				position:myCenter7, 
+				});
+				marker7.setMap(map);
+				var infowindow7 = new google.maps.InfoWindow({content:"ABC Playground <br> East Houston Street New York, 10002"});
+				
+				var marker8 = new google.maps.Marker({ 
+				tags:'bathroom',
+				position:myCenter8, 
+				});
+				marker8.setMap(map);
+				var infowindow8 = new google.maps.InfoWindow({content:"Twenty-Four Sycamores Park <br> 501 East 60th Street New York, NY 10065"});
+				
+				var marker9 = new google.maps.Marker({
+				tags:'bathroom',
+				position:myCenter9,
+				});
+				marker9.setMap(map);
+				var infowindow9 = new google.maps.InfoWindow({content:"Central Park <br> Central Park, NY"});
+
+				
+	//public places
+
+			var marker10 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter10,
+			});
+			marker10.setMap(map);
+			var infowindow10 = new google.maps.InfoWindow({content:"Central Park<br> 15 Malcolm X Blvd New York, NY 10026"});
+			
+			var marker11 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter11,
+			});
+			marker11.setMap(map);
+			var infowindow11 = new google.maps.InfoWindow({content:"Central Park <br> East Dr New York, NY 10029"});
+			
+			var marker12 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter12,
+			});
+			marker12.setMap(map);
+			var infowindow12 = new google.maps.InfoWindow({content:"Central Park <br> 455 Central Park West New York, NY 10026"});
+			
+			var marker13 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter13,
+			});
+			marker13.setMap(map);
+			var infowindow13 = new google.maps.InfoWindow({content:"Central Park <br> 38 West Dr New York, NY 10019"});
+	
+			var marker14 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter14,
+			});
+			marker14.setMap(map);
+			var infowindow14 = new google.maps.InfoWindow({content:"New Amsterdam Branch Library <br> 9 Murray St, New York, NY 10007"});
+			
+			var marker15 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter15,
+			});
+			marker15.setMap(map);
+			var infowindow15 = new google.maps.InfoWindow({content:"Battery Park <br> 2 Washington St New York, NY 10004"});
+			
+			var marker16 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter16,
+			});
+			marker16.setMap(map);
+			var infowindow16 = new google.maps.InfoWindow({content:"Battery Park <br> Castle Clinton Battery Park Underpass New York, NY 10004"});
+			
+			var marker17 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter17,
+			});
+			marker17.setMap(map);
+			var infowindow17 = new google.maps.InfoWindow({content:"Whitehall Terminal Manhattan (South Ferry) <br> New York, NY 10004"});
+			
+			
+			var marker19 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter19,
+			});
+			marker19.setMap(map);
+			var infowindow19 = new google.maps.InfoWindow({content:"Little Flower Playground <br> 300 Cherry St New York, NY 10002"});
+			
+			var marker20 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter20,
+			});
+			marker20.setMap(map);
+			var infowindow20 = new google.maps.InfoWindow({content:"Nelson A. Rockefeller Park, World Financial Center <br> 6 River Terrace New York, NY 10007"});
+			
+			var marker21 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter21,
+			});
+			marker21.setMap(map);
+			var infowindow21 = new google.maps.InfoWindow({content:"Southwest Porch - Bryant Park <br> 41 W 40th St New York, NY 10018"});
+			
+			var marker22 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter22,
+			});
+			marker22.setMap(map);
+			var infowindow22 = new google.maps.InfoWindow({content:"Washington Square Park<br> 53 Washington Square New York, NY 10012"});
+			
+			var marker23 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter23,
+			});
+			marker23.setMap(map);
+			var infowindow23 = new google.maps.InfoWindow({content:"Union Square Park<br> Union Square Manhattan, NY 10017"});
+			
+			var marker24 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter24,
+			});
+			marker24.setMap(map);
+			var infowindow24 = new google.maps.InfoWindow({content:"Lenox Ave & W 110th St <br> New York, NY 10026"});
+			
+			var marker25 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter25,
+			});
+			marker25.setMap(map);
+			var infowindow25 = new google.maps.InfoWindow({content:"106th, Mid-Park"});
+			
+			var marker26 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter26,
+			});
+			marker26.setMap(map);
+			var infowindow26 = new google.maps.InfoWindow({content:"Great Hill <br> W. 106th St."});
+			
+			var marker27 = new google.maps.Marker({
+			tags:'bathroom',
+			title: 'BR',
+			position:myCenter27,
+			});
+			marker27.setMap(map);
+			var infowindow27 = new google.maps.InfoWindow({content:"North Meadow Recreation Center <br> 97th Street Transverse Road, Central Park"});
+			
+			var marker28 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter28,
+			});
+			marker28.setMap(map);
+			var infowindow28 = new google.maps.InfoWindow({content:"Castle Clinton <br> 17 Battery Pl, New York, NY 10005"});
+			
+	
+			
+	//stores
+	
+			var marker29 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter29,
+			});
+			marker29.setMap(map);
+			var infowindow29 = new google.maps.InfoWindow({content:"McDonalds <br> 6 Water St."});
+			
+			var marker30 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter30,
+			});
+			marker30.setMap(map);
+			var infowindow30 = new google.maps.InfoWindow({content:"Burger King <br> 44 Gold St, New York, NY 10038"});
+			
+			var marker31 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter31,
+			});
+			marker31.setMap(map);
+			var infowindow31 = new google.maps.InfoWindow({content:"Pottery Barn Kids <br> 1311 2nd Ave New York, NY 10021"});
+			
+			var marker32 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter32,
+			});
+			marker32.setMap(map);
+			var infowindow32 = new google.maps.InfoWindow({content:"The Shops at the Plaza<br>1 W 58th St New York, NY 10019"});
+			
+			var marker33 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter33,
+			});
+			marker33.setMap(map);
+			var infowindow33 = new google.maps.InfoWindow({content:"Mackenzie-Childs<br>14 West 57th Street, New York, NY 10019"});
+			
+			var marker34 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter34,
+			});
+			marker34.setMap(map);
+			var infowindow34 = new google.maps.InfoWindow({content:"Henry Bendel<br>712 5th Ave., New York, NY 10019"});
+			
+			var marker35 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter35,
+			});
+			marker35.setMap(map);
+			var infowindow35 = new google.maps.InfoWindow({content:"Brooks Brothers<br>346 Madison Ave., New York, NY 10017 "});
+			
+			var marker36 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter36,
+			});
+			marker36.setMap(map);
+			var infowindow36 = new google.maps.InfoWindow({content:"Opening Ceremony<br>1190-1192 Broadway, New York, NY 10001"});
+			
+			var marker37 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter37,
+			});
+			marker37.setMap(map);
+			var infowindow37 = new google.maps.InfoWindow({content:"Jeffrey New York<br>449 W. 14th St., New York, NY 10014 "});
+			
+			var marker38 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter38,
+			});
+			marker38.setMap(map);
+			var infowindow38 = new google.maps.InfoWindow({content:"Barney's Co-p Chelsea<br>236 W 18th St, New York, NY 10011"});
+			
+			var marker39 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter39,
+			});
+			marker39.setMap(map);
+			var infowindow39 = new google.maps.InfoWindow({content:"Tracy Reese<br>641 Hudson St, New York, NY 10014"});
+			
+			var marker40 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter40,
+			});
+			marker40.setMap(map);
+			var infowindow40 = new google.maps.InfoWindow({content:"West Elm<br>112 W 18th St., New York, NY 10011"});
+			
+			var marker41 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter41,
+			});
+			marker41.setMap(map);
+			var infowindow41 = new google.maps.InfoWindow({content:"Restoration Hardware<br>935 Broadway, New York, NY 10010"});
+			
+			var marker42 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter42,
+			});
+			marker42.setMap(map);
+			var infowindow42 = new google.maps.InfoWindow({content:"Room & Board<br>105 Wooster St, New York, NY 10012"});
+			
+			var marker43 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter43,
+			});
+			marker43.setMap(map);
+			var infowindow43 = new google.maps.InfoWindow({content:"Tory Burch<br>257 Elizabeth Street, New York, NY 10012"});
+			
+			var marker44 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter44,
+			});
+			marker44.setMap(map);
+			var infowindow44 = new google.maps.InfoWindow({content:"BLK DNM<br>237 Lafayette St., New York, NY 10012"});
+			
+			var marker45 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter45,
+			});
+			marker45.setMap(map);
+			var infowindow45 = new google.maps.InfoWindow({content:"Bloomingdale's<br>504 Broadway, New York, NY 10012"});
+			
+			var marker46 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter46,
+			});
+			marker46.setMap(map);
+			var infowindow46 = new google.maps.InfoWindow({content:"C. Wonder<br>72 Spring St., New York, NY 10012"});
+			
+			var marker47 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter47,
+			});
+			marker47.setMap(map);
+			var infowindow47 = new google.maps.InfoWindow({content:"Saturdays Surf NYC<br>31 Crosby St., New York, NY 10013"});
+			
+			var marker48 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter48,
+			});
+			marker48.setMap(map);
+			var infowindow48 = new google.maps.InfoWindow({content:"Bergdorf Goodman<br>754 5th Ave, New York, NY 10022"});
+			
+	//attractions 
+
+			var marker49 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter49,
+			});
+			marker49.setMap(map);
+			var infowindow49 = new google.maps.InfoWindow({content:"Museum of Modern Art (MOMA)<br>11 W 53rd St, New York, NY"});
+			
+			var marker50 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter50,
+			});
+			marker50.setMap(map);
+			var infowindow50 = new google.maps.InfoWindow({content:"Empire State Building<br>350 5th Ave, New York, NY"});
+			
+			var marker51 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter51,
+			});
+			marker51.setMap(map);
+			var infowindow51 = new google.maps.InfoWindow({content:"Statue of Liberty<br>Liberty Island, New York, NY"});
+			
+			var marker52 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter52,
+			});
+			marker52.setMap(map);
+			var infowindow52 = new google.maps.InfoWindow({content:"Metropolitan Museum of Art (MET)<br>1000 5th Ave, New York, NY ‎"});
+			
+			var marker53 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter53,
+			});
+			marker53.setMap(map);
+			var infowindow53 = new google.maps.InfoWindow({content:"American Museum of Natural History<br>Central Park West, New York, NY 10024"});
+			
+			var marker54 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter54,
+			});
+			marker54.setMap(map);
+			var infowindow54 = new google.maps.InfoWindow({content:"Guggenheim Museum<br>1071 5th Ave, New York, NY"});
+			
+			var marker55 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter55,
+			});
+			marker55.setMap(map);
+			var infowindow55 = new google.maps.InfoWindow({content:"Rockefeller Center<br>45 Rockefeller Plaza, New York, NY"});
+			
+			var marker56 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter56,
+			});
+			marker56.setMap(map);
+			var infowindow56 = new google.maps.InfoWindow({content:"Top of the Rock<br>30 Rockefeller Plaza, New York, NY"});
+			
+			var marker57 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter57,
+			});
+			marker57.setMap(map);
+			var infowindow57 = new google.maps.InfoWindow({content:"United Nations<br>East 45th St"});
+			
+			var marker58 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter58,
+			});
+			marker58.setMap(map);
+			var infowindow58 = new google.maps.InfoWindow({content:"The High Line<br>Gansevoort St"});
+			
+			var marker59 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter59,
+			});
+			marker59.setMap(map);
+			var infowindow59 = new google.maps.InfoWindow({content:"The High Line<br>West 14th St"});
+			
+			var marker60 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter60,
+			});
+			marker60.setMap(map);
+			var infowindow60 = new google.maps.InfoWindow({content:"The High Line<br>West 16th St"});
+			
+			var marker61 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter61,
+			});
+			marker61.setMap(map);
+			var infowindow61 = new google.maps.InfoWindow({content:"The High Line<br>West 18th St"});
+			
+			var marker62 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter62,
+			});
+			marker62.setMap(map);
+			var infowindow62 = new google.maps.InfoWindow({content:"The High Line<br>West 20th St"});
+			
+			var marker63 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter63,
+			});
+			marker63.setMap(map);
+			var infowindow63 = new google.maps.InfoWindow({content:"The High Line<br>West 23rd St"});
+			
+			var marker64 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter64,
+			});
+			marker64.setMap(map);
+			var infowindow64 = new google.maps.InfoWindow({content:"The High Line<br>West 26th St"});
+			
+			var marker65 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter65,
+			});
+			marker65.setMap(map);
+			var infowindow65 = new google.maps.InfoWindow({content:"The High Line<br>West 28th St"});
+			
+			var marker66 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter66,
+			});
+			marker66.setMap(map);
+			var infowindow66 = new google.maps.InfoWindow({content:"The High Line<br>West 30th St"});	
+			
+					//additional public places
+			
+					
+					var marker89 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter89,
+					});
+					marker89.setMap(map);
+					var infowindow89 = new google.maps.InfoWindow({content:"Webster Library <br>1465 York Avenue, NY, 10021"});
+					
+					var marker90 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter90,
+					});
+					marker90.setMap(map);
+					var infowindow90 = new google.maps.InfoWindow({content:"St. Agnes Library <br>444 Amsterdam Ave, NY, 10024"});
+					
+					var marker91 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter91,
+					});
+					marker91.setMap(map);
+					var infowindow91 = new google.maps.InfoWindow({content:"Schwarzman Public Library <br> 5th Avenue 42nd St, NY, 10018"});
+			
+					var marker92 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter92,
+					});
+					marker92.setMap(map);
+					var infowindow92 = new google.maps.InfoWindow({content:"Science, Industry and Business Library<br>188 Madison Avenue 34th St, NY, 10016"});
+					
+					var marker93 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter93,
+					});
+					marker93.setMap(map);
+					var infowindow93 = new google.maps.InfoWindow({content:"Roosevelt Island Library <br> 524 Main Street, NY, 10037"});
+					
+					var marker94 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter94,
+					});
+					marker94.setMap(map);
+					var infowindow94 = new google.maps.InfoWindow({content:" Riverside Library<br> 127 Amsterdam Avenue, NY, 10023"});
+					
+					var marker95 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter95,
+					});
+					marker95.setMap(map);
+					var infowindow95 = new google.maps.InfoWindow({content:"New York Public Library for the Performing Arts<br> 40 Lincoln Center Plaza, NY, 10023"});
+					
+					var marker96 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter96,
+					});
+					marker96.setMap(map);
+					var infowindow96 = new google.maps.InfoWindow({content:" New Amsterdam Library <br> 9 Murray Street, NY, 10007"});
+					
+					var marker97 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter97,
+					});
+					marker97.setMap(map);
+					var infowindow97 = new google.maps.InfoWindow({content:"Ottendorfer Library <br> 135 2nd Avenue, NY, 10003"});
+					
+					var marker98 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter98,
+					});
+					marker98.setMap(map);
+					var infowindow98 = new google.maps.InfoWindow({content:"Muhlenberg Library <br> 209 West 23rd Street, NY, 10012"});
+					
+					var marker99 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter99,
+					});
+					marker99.setMap(map);
+					var infowindow99 = new google.maps.InfoWindow({content:"Mid-Manhattan Library <br> 455 5th Avenue, NY, 10016"});
+					
+					var marker100 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter100,
+					});
+					marker100.setMap(map);
+					var infowindow100 = new google.maps.InfoWindow({content:"Yorkville Library <br> 222 East 79th St, NY, 10021"});
+					
+					var marker101 = new google.maps.Marker({
+					tags:'bathroom',
+					position:myCenter101,
+					});
+					marker101.setMap(map);
+					var infowindow101 = new google.maps.InfoWindow({content:"Battery Park City Library <br> 175 North End Avenue, NY, 10282"});
+			
+	//original 
+			
+					google.maps.event.addListener(marker, 'click', function() {
+						infowindow.open(map,marker);
+					});
+
+					google.maps.event.addListener(marker1, 'click', function() {
+						infowindow1.open(map,marker1)
+					});
+					
+					google.maps.event.addListener(marker2, 'click', function() {
+						infowindow2.open(map,marker2);
+					});
+					
+					google.maps.event.addListener(marker3, 'click', function() {
+						infowindow3.open(map,marker3);
+					});
+					
+					google.maps.event.addListener(marker4, 'click', function() {
+						infowindow4.open(map,marker4);
+					});
+					
+					google.maps.event.addListener(marker5, 'click', function() {
+						infowindow5.open(map,marker5);
+					});
+					
+					google.maps.event.addListener(marker6, 'click', function() {
+						infowindow6.open(map,marker6);
+					});
+					
+					google.maps.event.addListener(marker7, 'click', function() {
+						infowindow7.open(map,marker7);
+					});
+					
+					google.maps.event.addListener(marker8, 'click', function() {
+						infowindow8.open(map,marker8);
+					});
+					
+					google.maps.event.addListener(marker9, 'click', function() {
+						infowindow9.open(map,marker9);
+					});
+					
+					
+
+	//public places	
+
+			google.maps.event.addListener(marker10, 'click', function() {
+						infowindow10.open(map,marker10);
+					});
+					
+					google.maps.event.addListener(marker11, 'click', function() {
+						infowindow11.open(map,marker11);
+					});
+					
+					google.maps.event.addListener(marker12, 'click', function() {
+						infowindow12.open(map,marker12);
+					});
+					
+					google.maps.event.addListener(marker13, 'click', function() {
+						infowindow13.open(map,marker13);
+					});
+					
+					google.maps.event.addListener(marker14, 'click', function() {
+						infowindow14.open(map,marker14);
+					});
+					
+					google.maps.event.addListener(marker15, 'click', function() {
+						infowindow15.open(map,marker15);
+					});
+					
+					google.maps.event.addListener(marker16, 'click', function() {
+						infowindow16.open(map,marker16);
+					});
+					
+					google.maps.event.addListener(marker17, 'click', function() {
+						infowindow17.open(map,marker17);
+					});
+					 //
+		
+				google.maps.event.addListener(marker19, 'click', function() {
+						infowindow19.open(map,marker19);
+					});
+					
+					google.maps.event.addListener(marker20, 'click', function() {
+						infowindow20.open(map,marker20);
+					});
+					
+					google.maps.event.addListener(marker21, 'click', function() {
+						infowindow21.open(map,marker21);
+					});
+					
+					google.maps.event.addListener(marker22, 'click', function() {
+						infowindow22.open(map,marker22);
+					});
+					
+					google.maps.event.addListener(marker23, 'click', function() {
+						infowindow23.open(map,marker23);
+					});
+					
+					google.maps.event.addListener(marker24, 'click', function() {
+						infowindow24.open(map,marker24);
+					});
+					
+					google.maps.event.addListener(marker25, 'click', function() {
+						infowindow25.open(map,marker25);
+					});
+					
+					google.maps.event.addListener(marker26, 'click', function() {
+						infowindow26.open(map,marker26);
+					});
+					
+					google.maps.event.addListener(marker27, 'click', function() {
+						infowindow27.open(map,marker27);
+					});
+					
+					google.maps.event.addListener(marker28, 'click', function() {
+						infowindow28.open(map,marker28);
+					});	
+			
+	//stores 
+	
+					google.maps.event.addListener(marker29, 'click', function() {
+						infowindow29.open(map,marker29);
+					});
+					
+					google.maps.event.addListener(marker30, 'click', function() {
+						infowindow30.open(map,marker30);
+					});
+					
+					google.maps.event.addListener(marker31, 'click', function() {
+						infowindow31.open(map,marker31);
+					});
+					
+					google.maps.event.addListener(marker32, 'click', function() {
+						infowindow32.open(map,marker32);
+					});
+					
+					google.maps.event.addListener(marker33, 'click', function() {
+						infowindow33.open(map,marker33);
+					});
+					
+					google.maps.event.addListener(marker34, 'click', function() {
+						infowindow34.open(map,marker34);
+					});
+					
+					google.maps.event.addListener(marker35, 'click', function() {
+						infowindow35.open(map,marker35);
+					});
+					
+					google.maps.event.addListener(marker36, 'click', function() {
+						infowindow36.open(map,marker36);
+					});
+					
+					google.maps.event.addListener(marker37, 'click', function() {
+						infowindow37.open(map,marker37);
+					});
+					
+					google.maps.event.addListener(marker38, 'click', function() {
+						infowindow38.open(map,marker38);
+					});	
+					
+					
+					google.maps.event.addListener(marker39, 'click', function() {
+						infowindow39.open(map,marker39);
+					});
+					
+					google.maps.event.addListener(marker40, 'click', function() {
+						infowindow40.open(map,marker40);
+					});
+					
+					google.maps.event.addListener(marker41, 'click', function() {
+						infowindow41.open(map,marker41);
+					});
+					
+					google.maps.event.addListener(marker42, 'click', function() {
+						infowindow42.open(map,marker42);
+					});
+					
+					google.maps.event.addListener(marker43, 'click', function() {
+						infowindow43.open(map,marker43);
+					});
+					
+					google.maps.event.addListener(marker44, 'click', function() {
+						infowindow44.open(map,marker44);
+					});
+					
+					google.maps.event.addListener(marker45, 'click', function() {
+						infowindow45.open(map,marker45);
+					});
+					
+					google.maps.event.addListener(marker46, 'click', function() {
+						infowindow46.open(map,marker46);
+					});
+					
+					google.maps.event.addListener(marker47, 'click', function() {
+						infowindow47.open(map,marker47);
+					});
+					
+					google.maps.event.addListener(marker48, 'click', function() {
+						infowindow48.open(map,marker48);
+					});	
+	
+	//attractions
+					google.maps.event.addListener(marker49, 'click', function() {
+						infowindow49.open(map,marker49);
+					});
+					
+					google.maps.event.addListener(marker50, 'click', function() {
+						infowindow50.open(map,marker50);
+					});
+					
+					google.maps.event.addListener(marker51, 'click', function() {
+						infowindow51.open(map,marker51);
+					});
+					
+					google.maps.event.addListener(marker52, 'click', function() {
+						infowindow52.open(map,marker52);
+					});
+					
+					google.maps.event.addListener(marker53, 'click', function() {
+						infowindow53.open(map,marker53);
+					});
+					
+					google.maps.event.addListener(marker54, 'click', function() {
+						infowindow54.open(map,marker54);
+					});
+					
+					google.maps.event.addListener(marker55, 'click', function() {
+						infowindow55.open(map,marker55);
+					});
+					
+					google.maps.event.addListener(marker56, 'click', function() {
+						infowindow56.open(map,marker56);
+					});
+					
+					google.maps.event.addListener(marker57, 'click', function() {
+						infowindow57.open(map,marker57);
+					});
+					
+					google.maps.event.addListener(marker58, 'click', function() {
+						infowindow58.open(map,marker58);
+					});	
+					
+				
+					google.maps.event.addListener(marker59, 'click', function() {
+						infowindow59.open(map,marker59);
+					});
+					
+					google.maps.event.addListener(marker60, 'click', function() {
+						infowindow60.open(map,marker60);
+					});
+					
+					google.maps.event.addListener(marker61, 'click', function() {
+						infowindow61.open(map,marker61);
+					});
+					
+					google.maps.event.addListener(marker62, 'click', function() {
+						infowindow62.open(map,marker62);
+					});
+					
+					google.maps.event.addListener(marker63, 'click', function() {
+						infowindow63.open(map,marker63);
+					});
+					
+					google.maps.event.addListener(marker64, 'click', function() {
+						infowindow64.open(map,marker64);
+					});
+					
+					google.maps.event.addListener(marker65, 'click', function() {
+						infowindow65.open(map,marker65);
+					});
+					
+					google.maps.event.addListener(marker66, 'click', function() {
+						infowindow66.open(map,marker66);
+					});
+					
+//additional publicplaces
+					
+						google.maps.event.addListener(marker89, 'click', function() {
+						infowindow89.open(map,marker89)
+					});
+					
+					google.maps.event.addListener(marker90, 'click', function() {
+						infowindow90.open(map,marker90);
+					});
+					
+					google.maps.event.addListener(marker91, 'click', function() {
+						infowindow91.open(map,marker91);
+					});
+					
+					google.maps.event.addListener(marker92, 'click', function() {
+						infowindow92.open(map,marker92);
+					});
+					
+					google.maps.event.addListener(marker93, 'click', function() {
+						infowindow93.open(map,marker93);
+					});
+					
+					google.maps.event.addListener(marker94, 'click', function() {
+						infowindow94.open(map,marker94);
+					});
+					
+					google.maps.event.addListener(marker95, 'click', function() {
+						infowindow95.open(map,marker95);
+					});
+					
+					google.maps.event.addListener(marker96, 'click', function() {
+						infowindow96.open(map,marker96);
+					});
+					
+					google.maps.event.addListener(marker97, 'click', function() {
+						infowindow97.open(map,marker97);
+					});
+					
+					google.maps.event.addListener(marker98, 'click', function() {
+						infowindow98.open(map,marker98);
+					});
+					
+					google.maps.event.addListener(marker99, 'click', function() {
+						infowindow99.open(map,marker99);
+					});
+					
+					google.maps.event.addListener(marker100, 'click', function() {
+						infowindow100.open(map,marker100);
+					});
+					
+					google.maps.event.addListener(marker101, 'click', function() {
+						infowindow101.open(map,marker101);
+					});
+	
+				}
+
+		  google.maps.event.addDomListener(window, 'load', initialize);
+
+		</script>
+	</head>
+	<body bgcolor="#000000">
+			
+			<div data-role="header">
+				<div style="text-align:center; width:800px; margin-left:auto; margin-right:auto;">
+					<img id="imgid" src="alllrestrooms.jpg" usemap="#imgmap" border="0" width="800" height="166" alt="" />
+					
+					<map id="imgmap" name="imgmap">
+						<area shape="poly" coords="590,55,590,112,744,114,762,97,784,94,787,69,766,72,747,54," href="file:///C:/Users/GWC/Desktop/LIFE/index.html#page1" alt="" title=""   />
+					</map>
+				</div>
+			</div><!-- /header -->		
+		
+		<div id="map-canvas"/>
+		
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+				<script src="jquery.rwdImageMaps.min.js"></script>
+				<script>
+				$(document).ready(function(e) {
+					$('img[usemap]').rwdImageMaps();
+					
+					$('area').on('click', function() {
+						alert($(this).attr('alt') + ' clicked');
+					});
+				});
+				
+	</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<script src="../../js/ios-orientationchange-fix.min.js"></script>
+		<style type="text/css">
+			html{ height: 100% }
+			body { height: 100%; margin = 0; padding = 0 }
+			#map-canvas { height: 100% }
+			
+			#header{
+				position: absolute;
+				top: 5%;
+				left: 50%;
+			}
+			
+			#button{
+				position: absolute;
+				top: 7.8%;
+				left: 67%;
+			}
+			
+		</style>
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO1J1WIB-SabURVdPeww29EV28F40_o20&sensor=true">
+		</script>
+		<script type="text/javascript">
+			
+			var myCenter = new google.maps.LatLng(40.80383341390,-73.95241206580);			
+			var myCenter1 = new google.maps.LatLng(40.73007995640,-73.98778124410);			
+			var myCenter2 = new google.maps.LatLng(40.71282499600,-74.01629788320);			
+			var myCenter3 = new google.maps.LatLng(40.71731543770,-73.97683060310);			
+			var myCenter4 = new google.maps.LatLng(40.75374975000,-73.98354865940);			
+			var myCenter5 = new google.maps.LatLng(40.70294027340,-74.01572662730);			
+			var myCenter6 = new google.maps.LatLng(40.71108660490,-73.97820429520);			
+			var myCenter7 = new google.maps.LatLng(40.75033309150,-73.98763466500);			
+			var myCenter8 = new google.maps.LatLng(40.71145560070,-74.00037009260);			
+			var myCenter9 = new google.maps.LatLng(40.75923266090,-73.96007378300);			
+			var myCenter10 = new google.maps.LatLng(40.79668793010,-73.97603757660);			
+			var myCenter11 = new google.maps.LatLng(40.73382217850,-73.98442266260);			
+			var myCenter12 = new google.maps.LatLng(40.72643827470,-73.98169180050);			
+			var myCenter13 = new google.maps.LatLng(40.78134864440,-73.97406013820);
+			var myCenter14 = new google.maps.LatLng(40.74741056130,-74.00509981540);
+			var myCenter15 = new google.maps.LatLng(40.79307081250,-73.93528922290);
+			var myCenter16 = new google.maps.LatLng(40.77917172400,-73.98150451710);
+			var myCenter17 = new google.maps.LatLng(40.71246643200,-73.98207630330);
+			var myCenter18 = new google.maps.LatLng(40.76101723900,-73.96437803010);
+			var myCenter19 = new google.maps.LatLng(40.73088189200,-73.99759193440);
+			var myCenter20 = new google.maps.LatLng(40.819899,-73.961209);
+			
+			
+			
+			function initialize() {
+			var mapOptions = {
+			  center:myCenter11,
+			  zoom: 12,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			}; 
+			
+			var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+			
+			var marker = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker.setIcon(iconFile) 
+			marker.setMap(map);
+			var infowindow = new google.maps.InfoWindow({content:"A Philip Randolph Square <br> 7 Av, St Nicholas Av, W 117 St."});
+
+			var marker1 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter1,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker1.setIcon(iconFile) 
+			marker1.setMap(map);
+			var infowindow1 = new google.maps.InfoWindow({content:"Abe Lebewohl Triangle <br> E. 10 St. and Stuyvesant Pl."});
+			
+			var marker2 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter2,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker2.setIcon(iconFile) 
+			marker2.setMap(map);
+			var infowindow2 = new google.maps.InfoWindow({content:"Battery Park City <br> Hudson River, Liberty St. West St, and Pier A"});
+			
+			var marker3 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter3,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker3.setIcon(iconFile) 
+			marker3.setMap(map);
+			var infowindow3 = new google.maps.InfoWindow({content:"Baruch Playground <br> Corner of Baruch Pl. and Mangin St."});
+	
+			var marker4 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter4,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker4.setIcon(iconFile) 		
+			marker4.setMap(map);
+			var infowindow4 = new google.maps.InfoWindow({content:"Bryant Park <br> 9 Murray St, New York, NY 10007"});
+			
+			var marker5 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter5,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker5.setIcon(iconFile) 
+			marker5.setMap(map);
+			var infowindow5 = new google.maps.InfoWindow({content:"Battery Park <br> Battery Pl, State St and Whitehall St"});
+			
+			var marker6 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter6,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker6.setIcon(iconFile) 
+			marker6.setMap(map);
+			var infowindow6 = new google.maps.InfoWindow({content:"East River Park <br> Montgomery St. To E. 12 St., FDR Drive"});
+			
+			var marker7 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter7,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker7.setIcon(iconFile) 
+			marker7.setMap(map);
+			var infowindow7 = new google.maps.InfoWindow({content:"Herald Square <br> Broadway, Av Of Americas, bet. W 34 St and W 35 St"});
+			
+			var marker8 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter8,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker8.setIcon(iconFile) 
+			marker8.setMap(map);
+			var infowindow8 = new google.maps.InfoWindow({content:"James Madison Plaza <br> Pearl St., Madison St. and St James Pl."});
+			
+			var marker9 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter9,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker9.setIcon(iconFile) 
+			marker9.setMap(map);
+			var infowindow9 = new google.maps.InfoWindow({content:"Queensboro Oval <br> West of York Ave., E 59 St. To E 60 St."});
+			
+			var marker10 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter10,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker10.setIcon(iconFile) 
+			marker10.setMap(map);
+			var infowindow10 = new google.maps.InfoWindow({content:"Riverside Park <br> Riverside Dr. to Hudson River, W. 72 St.to St Clair Pl."});
+			
+			var marker11 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter11,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker11.setIcon(iconFile) 
+			marker11.setMap(map);
+			var infowindow11 = new google.maps.InfoWindow({content:"Stuyvesant Square <br> Rutherford Pl. To N D Perlman Pl., E 15 St. To E 17 St."});
+			
+			var marker12 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter12,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker12.setIcon(iconFile) 
+			marker12.setMap(map);
+			var infowindow12 = new google.maps.InfoWindow({content:"Tompkins Square Park <br> Ave. A To Ave. B, E. 7 St. To E. 10 St."});
+			
+			var marker13 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter13,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker13.setIcon(iconFile) 
+			marker13.setMap(map);
+			var infowindow13 = new google.maps.InfoWindow({content:"Theodore Roosevelt Park <br> Central Park W, Columbus Av, W 77 To W 81 Sts"});
+			
+			var marker14 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter14,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker14.setIcon(iconFile) 
+			marker14.setMap(map);
+			var infowindow14 = new google.maps.InfoWindow({content:"The High Line <br> Gansevoort St. To W. 30 St. bet.ween Washington St. and 11 Ave."});
+			
+			var marker15 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter15,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker15.setIcon(iconFile) 
+			marker15.setMap(map);
+			var infowindow15 = new google.maps.InfoWindow({content:"Thomas Jefferson Park <br> 1 Ave., FDR Dr., bet. E. 111 St. and E. 114 St."});
+			
+			var marker16 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter16,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker16.setIcon(iconFile) 
+			marker16.setMap(map);
+			var infowindow16 = new google.maps.InfoWindow({content:"Verdi Square <br> Broadway, Amsterdam Ave. and W. 73 St."});
+			
+			var marker17 = new google.maps.Marker({
+			tags:'bathroom',
+			title: 'BR',
+			position:myCenter17,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker17.setIcon(iconFile) 
+			marker17.setMap(map);
+			var infowindow17 = new google.maps.InfoWindow({content:"Vladeck Park <br> Madison St. To Water St. bet.ween Jackson St. and Gouverneur St."});
+			
+			var marker18 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter18,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker18.setIcon(iconFile) 
+			marker18.setMap(map);
+			var infowindow18 = new google.maps.InfoWindow({content:"Tramway Plaza <br> Second Ave. bet. E. 59 St. to E. 60 St."});
+			
+			var marker19 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter19,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker19.setIcon(iconFile) 
+			marker19.setMap(map);
+			var infowindow19 = new google.maps.InfoWindow({content:"Washington Square Park <br> 5 Ave, Waverly Pl., W. 4 St. and Macdougal St."});
+			
+			var marker20 = new google.maps.Marker({
+			tags:'bathroom',
+			position:myCenter20,
+			});
+			iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; 
+			marker20.setIcon(iconFile) 
+			marker20.setMap(map);
+			var infowindow20 = new google.maps.InfoWindow({content:"West Harlem Piers <br> Henry Hudson Pkwy. bet. St Clair Pl. and W. 135 St."});
+			
+		//infowindows
+			
+					google.maps.event.addListener(marker, 'click', function() {
+						infowindow.open(map,marker);
+					});
+
+					google.maps.event.addListener(marker1, 'click', function() {
+						infowindow1.open(map,marker1)
+					});
+					
+					google.maps.event.addListener(marker2, 'click', function() {
+						infowindow2.open(map,marker2);
+					});
+					
+					google.maps.event.addListener(marker3, 'click', function() {
+						infowindow3.open(map,marker3);
+					});
+					
+					google.maps.event.addListener(marker4, 'click', function() {
+						infowindow4.open(map,marker4);
+					});
+					
+					google.maps.event.addListener(marker5, 'click', function() {
+						infowindow5.open(map,marker5);
+					});
+					
+					google.maps.event.addListener(marker6, 'click', function() {
+						infowindow6.open(map,marker6);
+					});
+					
+					google.maps.event.addListener(marker7, 'click', function() {
+						infowindow7.open(map,marker7);
+					});
+					
+					google.maps.event.addListener(marker8, 'click', function() {
+						infowindow8.open(map,marker8);
+					});
+					
+					google.maps.event.addListener(marker9, 'click', function() {
+						infowindow9.open(map,marker9);
+					});
+					
+					google.maps.event.addListener(marker10, 'click', function() {
+						infowindow10.open(map,marker10);
+					});
+					
+					google.maps.event.addListener(marker11, 'click', function() {
+						infowindow11.open(map,marker11);
+					});
+					
+					google.maps.event.addListener(marker12, 'click', function() {
+						infowindow12.open(map,marker12);
+					});
+					
+					google.maps.event.addListener(marker13, 'click', function() {
+						infowindow13.open(map,marker13);
+					});
+					
+					google.maps.event.addListener(marker14, 'click', function() {
+						infowindow14.open(map,marker14);
+					});
+					
+					google.maps.event.addListener(marker15, 'click', function() {
+						infowindow15.open(map,marker15);
+					});
+					
+					google.maps.event.addListener(marker16, 'click', function() {
+						infowindow16.open(map,marker16);
+					});
+					
+					google.maps.event.addListener(marker17, 'click', function() {
+						infowindow17.open(map,marker17);
+					});
+						
+					google.maps.event.addListener(marker18, 'click', function() {
+						infowindow18.open(map,marker18);
+					});
+					
+					google.maps.event.addListener(marker19, 'click', function() {
+						infowindow19.open(map,marker19);
+					});
+					
+					google.maps.event.addListener(marker20, 'click', function() {
+						infowindow20.open(map,marker20);
+					});
+					
+					}
+
+		  google.maps.event.addDomListener(window, 'load', initialize);
+		  
+	</script>
+	</head>
+	<body bgcolor="#000000">
+	
+			<<div data-role="header">
+				<div style="text-align:center; width:800px; margin-left:auto; margin-right:auto;">
+					<img id="imgid" src="bannerwaterfountains.jpg" usemap="#imgmap" border="0" width="800" height="166" alt="" />
+					
+					<map id="imgmap" name="imgmap">
+						<area shape="poly" coords="590,55,590,112,744,114,762,97,784,94,787,69,766,72,747,54," href="file:///C:/Users/GWC/Desktop/LIFE/index.html#page1" alt="" title=""   />
+					</map>
+				</div>
+			</div><!-- /header -->		
+		
+		<div id="map-canvas"/>
+		
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+				<script src="jquery.rwdImageMaps.min.js"></script>
+				<script>
+				$(document).ready(function(e) {
+					$('img[usemap]').rwdImageMaps();
+					
+					$('area').on('click', function() {
+						alert($(this).attr('alt') + ' clicked');
+					});
+				});
+	</body>
+</html>
